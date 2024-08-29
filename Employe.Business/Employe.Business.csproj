@@ -11,4 +11,9 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Employe.Data\Employe.Data.csproj" />
+    <ProjectReference Include="..\Employe.Domain\Employe.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -15,4 +15,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Employe.Business\Employe.Business.csproj" />
+    <ProjectReference Include="..\Employe.Domain\Employe.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -16,6 +16,13 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<IRepositoryEmploye, RepositoryEmploye>();
 builder.Services.AddTransient<IEmployeService, EmployeService>();
 
+//Cors
+builder.Services.AddCors(options =>{
+    options.AddPolicy("NewPolicy", app =>
+    {
+        app.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -29,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseRouting();
+
+app.UseCors("NewPolicy");
 
 app.UseAuthorization();
 
